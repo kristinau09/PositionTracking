@@ -13,7 +13,9 @@ import com.example.positionTracking.DataRepository;
 import com.example.positionTracking.PositionOfVehicle;
 import com.example.positionTracking.VehicleNotFoundException;
 
-
+/*
+ * Need to register this application to eureka
+ */
 
 @RestController
 public class PositionReportsController 

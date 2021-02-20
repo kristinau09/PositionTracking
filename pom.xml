@@ -19,9 +19,11 @@
 	<description>A microservice that tracks the position of the vehicle</description>
 
 	<properties>
+		<!-- Specifying a character encoding scheme to be used for the reading and writing of files -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>11</java.version>
+		<spring-cloud.version>2020.0.1</spring-cloud.version>
 	</properties>
 
 	<dependencies>
@@ -41,19 +43,38 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Eureka client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
-
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>

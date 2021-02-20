@@ -34,7 +34,7 @@ public class DataRepository {
 			positions = new PriorityQueue<PositionOfVehicle>();
 			positionQueues.put(vehicleName, positions);
 		}
-		PositionOfVehicle newPosition = new PositionOfVehicle(data.get("lat"), data.get("long"), data.get("time"));
+		PositionOfVehicle newPosition = new PositionOfVehicle(data.get("latitude"), data.get("longitude"), data.get("time"));
 		positions.add(newPosition);
 	}
 	

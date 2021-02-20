@@ -63,8 +63,7 @@ public class PositionOfVehicle implements Comparable<PositionOfVehicle>{
 
 	@Override
 	public int compareTo(PositionOfVehicle o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return o.timeStamp.compareTo(this.timeStamp);
 	}
 	
 	

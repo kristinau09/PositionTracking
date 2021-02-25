@@ -18,23 +18,32 @@ import com.example.positionTracking.VehicleNotFoundException;
  */
 
 @RestController
-public class PositionReportsController 
-{
+public class PositionReportsController {
 	@Autowired
 	private DataRepository data;
-	
-	@RequestMapping(method=RequestMethod.GET,value="/vehicles/{vehicleName}", produces=MediaType.APPLICATION_XML_VALUE)
-	public ResponseEntity<PositionOfVehicle> getLatestReportForVehicle(@PathVariable String vehicleName)
-	{
-		try 
-		{
+
+	@RequestMapping(method = RequestMethod.GET, value = "/vehicles/{vehicleName}", produces = MediaType.APPLICATION_XML_VALUE)
+	public ResponseEntity<PositionOfVehicle> getLatestReportForVehicle(@PathVariable String vehicleName) {
+		
+		try {
+			//sleep fro 500 ms
+			Thread.sleep(500);
+			
+		}catch(Exception e) {
+			
+		}
+		
+		//simulate
+		if(Math.random() < 0.75)  {
+			throw new RuntimeException("Problems! Give up");
+		}
+		try {
 			PositionOfVehicle position = data.getLatestPositionFor(vehicleName);
 			return new ResponseEntity<PositionOfVehicle>(position, HttpStatus.OK);
-		} 
-		catch (VehicleNotFoundException e) 
-		{
+			
+		} catch (VehicleNotFoundException e) {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-	
+
 }

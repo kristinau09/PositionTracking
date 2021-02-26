@@ -1,4 +1,4 @@
-package com.example.positionTracking;
+package com.example.positionTracking.domain;
 
 import java.math.BigDecimal;
 import java.text.DateFormat;

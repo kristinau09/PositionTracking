@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.positionTracking.DataRepository;
-import com.example.positionTracking.PositionOfVehicle;
-import com.example.positionTracking.VehicleNotFoundException;
+import com.example.positionTracking.dao.DataRepository;
+import com.example.positionTracking.domain.PositionOfVehicle;
+import com.example.positionTracking.exception.VehicleNotFoundException;
 
 /*
  * Need to register this application to eureka

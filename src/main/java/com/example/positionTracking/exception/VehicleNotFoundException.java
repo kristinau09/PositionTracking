@@ -1,4 +1,4 @@
-package com.example.positionTracking;
+package com.example.positionTracking.exception;
 
 public class VehicleNotFoundException extends Exception {
 

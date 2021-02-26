@@ -1,4 +1,4 @@
-package com.example.positionTracking;
+package com.example.positionTracking.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,6 +6,9 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 import org.springframework.stereotype.Repository;
+
+import com.example.positionTracking.domain.PositionOfVehicle;
+import com.example.positionTracking.exception.VehicleNotFoundException;
 
 /*
  * Just a standin for a proper database

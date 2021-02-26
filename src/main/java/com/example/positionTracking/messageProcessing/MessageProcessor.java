@@ -1,10 +1,12 @@
-package com.example.positionTracking;
+package com.example.positionTracking.messageProcessing;
 
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
+
+import com.example.positionTracking.dao.DataRepository;
 
 @Component
 public class MessageProcessor {

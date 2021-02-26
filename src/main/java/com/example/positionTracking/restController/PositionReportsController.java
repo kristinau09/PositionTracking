@@ -24,6 +24,8 @@ public class PositionReportsController {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/vehicles/{vehicleName}", produces = MediaType.APPLICATION_XML_VALUE)
 	public ResponseEntity<PositionOfVehicle> getLatestReportForVehicle(@PathVariable String vehicleName) {
+		
+		System.out.println("\nReceived Request:::::");
 
 		try {
 			PositionOfVehicle position = data.getLatestPositionFor(vehicleName);
